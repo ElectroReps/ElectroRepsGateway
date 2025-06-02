@@ -176,7 +176,7 @@ This repo is the microservice that hold the Reparation enities, its correspondin
 ## Extra links
 - Trello : https://trello.com/b/qdeJq0Rv/electroreps
 - Google Sldes : https://docs.google.com/presentation/d/1Uc33Grhw334lXXOZ_sK7m4oUTJfZf1UXScmnki08-Ss/edit?usp=sharing
-- Postman Collction : https://blue-zodiac-9830536.postman.co/workspace/My-Workspace~cd30aadd-1e2d-4b26-8f3b-eccef1d322c6/collection/44618249-a203c2fa-8ccc-4c92-a179-af314721a3cf?action=share&creator=44618249
+- Postman Collection : https://blue-zodiac-9830536.postman.co/workspace/My-Workspace~cd30aadd-1e2d-4b26-8f3b-eccef1d322c6/collection/44618249-a203c2fa-8ccc-4c92-a179-af314721a3cf?action=share&creator=44618249
 ## Future work
 Some of the features that could be implemented in the future as an improvement of the system are :
 - Implementation of security layers and role hierarchy with authentication and authorization
