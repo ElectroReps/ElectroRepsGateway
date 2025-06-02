@@ -1,0 +1,862 @@
+{
+	"info": {
+		"_postman_id": "a203c2fa-8ccc-4c92-a179-af314721a3cf",
+		"name": "ElectroReps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44618249"
+	},
+	"item": [
+		{
+			"name": "EMPLOYEE",
+			"item": [
+				{
+					"name": "GET EMPLOYEE ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"GET EMPLOYEE BY ID\",() => {\r",
+									"    pm.expect(code).to.equal(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/employees/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employees",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET EMPLOYEE BY NAME",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"GET EMPLOYEE BY NAME\",() => {\r",
+									"    pm.expect(code).to.equal(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/employees?name= ",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employees"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": " "
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET EMPLOYEE ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/employees",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST EMPLOYEE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"POST EMPLOYEE\",() => {\r",
+									"    pm.expect(code).to.equal(201);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"pepe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/employees",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT EMPLOYEE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"PUT EMPLOYEE\",() => {\r",
+									"    pm.expect(code).to.equal(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\" : \"alvaro\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/employees/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employees",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH EMPLOYEE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"PATCH EMPLOYEE\",() => {\r",
+									"    pm.expect(code).to.equal(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"alvaro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/employees/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employees",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE EMPLOYEE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"DELETE EMPLOYEE\",() => {\r",
+									"    pm.expect(code).to.equal(204);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\" : \"alvaro\"}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/employees/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CLIENT",
+			"item": [
+				{
+					"name": "GET CLIENT ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"GET CLIENT BY ID\",() => {\r",
+									"    pm.expect(code).to.equal(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/clients/18",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clients",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CLIENT BY NAME",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GET CLIENT BY EMAIL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"GET EMPLOYEE BY EMAIL\",() => {\r",
+									"    pm.expect(code).to.equal(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/clients?email=example@example.com",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clients"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "example@example.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CLIENT All",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"GET CLIENT ALL\",() => {\r",
+									"    pm.expect(code).to.equal(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/clients",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clients"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST CLIENT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"GET EMPLOYEE BY ID\",() => {\r",
+									"    pm.expect(code).to.equal(201);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"alvaro\",\r\n    \"email\" : \"email@email.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/clients",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH CLIENT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"PATCH CLIENT\",() => {\r",
+									"    pm.expect(code).to.equal(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\" : \"email@email.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/clients/18",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clients",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE CLIENT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"DELETE CLIENT BY ID\",() => {\r",
+									"    pm.expect(code).to.equal(204);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\" : \"email@email.com\"}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/clients/19",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clients",
+								"19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "REPARATION",
+			"item": [
+				{
+					"name": "GET REPARATION ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"GET REPARATION BY ID\",() => {\r",
+									"    pm.expect(code).to.equal(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/reparations/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reparations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET REPARATION BY CLIENT ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"GET REPARATION BY CLIENT ID\",() => {\r",
+									"    pm.expect(code).to.equal(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/reparations?clientId=18",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reparations"
+							],
+							"query": [
+								{
+									"key": "clientId",
+									"value": "18"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET REPARATION BY EMPLOYEE ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"GET REPARATION BY EEMPLOYEE ID\",() => {\r",
+									"    pm.expect(code).to.equal(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/reparations?employeeId=4",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reparations"
+							],
+							"query": [
+								{
+									"key": "employeeId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET REPARATION ALL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"GET REPARATION ALL\",() => {\r",
+									"    pm.expect(code).to.equal(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/reparations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reparations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET REPARATION BY FINISHED",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"GET REPARATION ALL ID\",() => {\r",
+									"    pm.expect(code).to.equal(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/reparations?finished=true",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reparations"
+							],
+							"query": [
+								{
+									"key": "finished",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST REPARATION",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"POST REPARATION BY ID\",() => {\r",
+									"    pm.expect(code).to.equal(400);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\" : 18,\r\n    \"employeeId\" : 4,\r\n    \"issueDescription\" : \"Laptop makes a lot of noise\",\r\n    \"finished\": true\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reparations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reparations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT REPARATION",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH REPARATION",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"employeeId\" : 4, \r\n   \"clientId\" : 18,\r\n  \"issueDescription\" : \"Thermal paste has to be changed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reparations/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reparations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE REPARATION",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const code = pm.response.code\r",
+									"\r",
+									"const bodyMsg = pm.response.text()\r",
+									"\r",
+									"pm.test(\"DELETE REPARATION\",() => {\r",
+									"    pm.expect(code).to.equal(204);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\" : \"email@email.com\"}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reparations/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reparations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
